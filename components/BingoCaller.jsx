@@ -29,10 +29,10 @@ const BingoCaller = () => {
                 <p className="sm:text-[64px] text-[50px] font-extrabold flex flex-row relative justify-center items-center py-4 px-6">{calledNumbers.length > 0 ? calledNumbers[calledNumbers.length - 1] : '-'}</p>
             </div>
             <ul className="">
-                <div className="grid md:grid-cols-2 grid-cols-3 w-full gap-8 pt-14">
+                <div className="grid grid-cols-3 items-center w-full gap-8 pt-8">
                     {calledNumbers.map((bingoNumber, index) => (
                         <li key={index}
-                            className="flex flex-col p-8 justify-center items-start text-black-100 hover:bg-white hover:shadow-md rounded-3xl">{bingoNumber}</li>
+                            className="flex flex-col p-2 justify-center items-center text-black-100 hover:bg-white hover:text-black hover:shadow-md rounded-3xl">{bingoNumber}</li>
                     ))}
                 </div>
             </ul>
