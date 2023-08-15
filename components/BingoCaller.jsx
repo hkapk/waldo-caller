@@ -35,7 +35,7 @@ const BingoCaller = () => {
 
     return (
         <div className="p-6">
-            <button className="flex flex-row relative justify-center mx-auto items-center py-4 px-6 outline rounded-3xl"
+            <button className="flex flex-row bg-slate-600 relative justify-center mx-auto items-center py-4 px-6 outline rounded-3xl"
                 onClick={callBingoNumber}>Draw</button>
             <div className="">
                 <p className="sm:text-[64px] text-[50px] 
