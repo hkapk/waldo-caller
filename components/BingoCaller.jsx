@@ -14,6 +14,11 @@ const BingoCaller = () => {
             'O': { min: 61, max: 75 },
         };
 
+        if (calledNumbers.length === 75) {
+            alert("All possible numbers have been called, click OK to proceed");
+            return;
+        }
+
         let bingoNumber;
         do {
             const letterIndex = Math.floor(Math.random() * letters.length);
