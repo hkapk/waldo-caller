@@ -35,10 +35,13 @@ const BingoCaller = () => {
 
     return (
         <div className="p-6">
-            <button className="flex flex-row relative justify-center mx-auto items-center py-4 px-6 outline rounded-3xl"
+            <button className="flex flex-row bg-slate-600 relative justify-center mx-auto items-center py-4 px-6 outline rounded-3xl"
                 onClick={callBingoNumber}>Draw</button>
             <div className="">
-                <p className="sm:text-[64px] text-[50px] font-extrabold flex flex-row relative justify-center items-center py-4 px-6">{calledNumbers.length > 0 ? calledNumbers[calledNumbers.length - 1] : ' '}</p>
+                <p className="sm:text-[64px] text-[50px] 
+                font-extrabold flex flex-row relative 
+                justify-center items-center py-4 px-2">
+                    {calledNumbers.length > 0 ? calledNumbers[calledNumbers.length - 1] : ' '}</p>
             </div>
             {letters.map((letter) => {
                 const numbersForLetter = calledNumbers
@@ -50,7 +53,8 @@ const BingoCaller = () => {
                         <h2 className="sm:text-[64px] text-[25px] items-center font-bold px-2">{letter}</h2>
                         <ul className="grid grid-cols-5 justify-center col-span-2 gap-8 px-4 py-4">
                             {numbersForLetter.map((bingoNumber, index) => (
-                                <li key={index}>{bingoNumber}</li>
+                                <li className=""
+                                    key={index}>{bingoNumber}</li>
                             ))}
                         </ul>
                     </div>
