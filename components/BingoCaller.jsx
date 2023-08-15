@@ -41,9 +41,9 @@ const BingoCaller = () => {
                     .sort((a, b) => parseInt(a.split('·')[1]) - parseInt(b.split('·')[1])); // Sort numerically
 
                 return (
-                    <div className="grid grid-cols-2 justify-center w-full pt-8" key={letter}>
+                    <div className="grid grid-cols-2 gap-4 justify-center w-full pt-8" key={letter}>
                         <h2 className="sm:text-[64px] text-[25px] font-bold px-2">{letter}</h2>
-                        <ul className="grid grid-cols-3 justify-center w-full gap-8 px-2 py-4">
+                        <ul className="grid grid-cols-5 justify-center col-span-2 gap-8 px-4 py-4">
                             {numbersForLetter.map((bingoNumber, index) => (
                                 <li key={index}>{bingoNumber}</li>
                             ))}
