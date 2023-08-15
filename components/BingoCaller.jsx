@@ -8,10 +8,10 @@ const BingoCaller = () => {
     const callBingoNumber = () => {
         const letterRanges = {
             'W': { min: 1, max: 15 },
-            'A': { min: 16, max: 31 },
-            'L': { min: 32, max: 46 },
-            'D': { min: 47, max: 61 },
-            'O': { min: 62, max: 75 },
+            'A': { min: 16, max: 30 },
+            'L': { min: 31, max: 45 },
+            'D': { min: 46, max: 60 },
+            'O': { min: 61, max: 75 },
         };
 
         let bingoNumber;
@@ -42,7 +42,7 @@ const BingoCaller = () => {
 
                 return (
                     <div className="grid grid-cols-2 gap-4 justify-center w-full pt-8" key={letter}>
-                        <h2 className="sm:text-[64px] text-[25px] font-bold px-2">{letter}</h2>
+                        <h2 className="sm:text-[64px] text-[25px] items-center font-bold px-2">{letter}</h2>
                         <ul className="grid grid-cols-5 justify-center col-span-2 gap-8 px-4 py-4">
                             {numbersForLetter.map((bingoNumber, index) => (
                                 <li key={index}>{bingoNumber}</li>
